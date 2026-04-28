@@ -1,0 +1,280 @@
+{
+  "personal": {
+    "name": "Atul Pandey",
+    "initials": "AP",
+    "title": "Full-Stack Mobile Developer",
+    "tagline": "AI • Offline-First • Cloud-Connected Apps",
+    "location": "Hyderabad, India",
+    "availabilityBadge": "Available for senior / staff roles",
+    "email": "atul.pandey1904@gmail.com",
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/the-atul-pandey/",
+      "handle": "the-atul-pandey"
+    },
+    "github": {
+      "url": "https://github.com/ironroggers",
+      "handle": "ironroggers"
+    },
+    "resumeUrl": "https://drive.google.com/file/d/1d1xIAOmNrbLiWFbTMwFAQzoF2D7hNgSF/view?usp=sharing",
+    "photo": "/Atul-Photo.jpeg"
+  },
+
+  "seo": {
+    "title": "Atul Pandey — Full-Stack Mobile & AI Engineer",
+    "description": "Full-Stack Mobile Engineer with 3+ years building offline-first, AI-powered, cloud-connected SaaS applications used by 5,000+ technicians globally.",
+    "keywords": ["React Native", "AI", "Mobile Engineer", "Full-Stack", "Offline-First", "LLM"]
+  },
+
+  "hero": {
+    "headlineParts": ["Building ", "AI-powered,", "offline-first systems", "at scale."],
+    "subheading": "Full-Stack Mobile Engineer with 3+ years shipping production-grade AI and offline-first SaaS apps used by 5,000+ technicians globally. Based in Hyderabad, India.",
+    "ctas": [
+      { "label": "View Work", "href": "#projects", "variant": "primary" },
+      { "label": "Get in Touch", "href": "#contact", "variant": "secondary" }
+    ],
+    "metrics": [
+      { "value": "47%", "label": "Faster RCA Resolution" },
+      { "value": "2.5×", "label": "Sync Performance" },
+      { "value": "60%", "label": "Latency Reduction" },
+      { "value": "5K+", "label": "Users Impacted" }
+    ]
+  },
+
+  "about": {
+    "heading": "Engineering systems that work everywhere, always.",
+    "paragraphs": [
+      "I build software that doesn't break when the internet does. My focus is on offline-first architectures, AI-powered tooling, and mobile systems that serve field technicians in environments where reliability isn't optional , it's the product.",
+      "At Innovapptive, I've shipped AI engines that cut RCA resolution time by 47%, sync systems that run 2.5× faster, and mobile apps used daily by 5,000+ technicians across enterprise deployments. I care deeply about measurable impact, not just clean code."
+    ],
+    "specializations": [
+      "Distributed Sync Systems",
+      "AI / LLM Applications",
+      "High-Performance Mobile",
+      "Edge ML & Offline-First",
+      "RAG Pipelines",
+      "Graph Databases"
+    ],
+    "stats": [
+      { "value": "3", "suffix": "+", "prefix": "", "label": "Years Experience" },
+      { "value": "5000", "suffix": "+", "prefix": "", "label": "Users Impacted" },
+      { "value": "4", "suffix": "+", "prefix": "", "label": "Enterprise Apps" },
+      { "value": "1", "suffix": "", "prefix": "#", "label": "Gen AI Hackathon" }
+    ]
+  },
+
+  "experience": [
+    {
+      "role": "Software Development Engineer II",
+      "subtitle": "AI & SaaS Systems",
+      "company": "Innovapptive Global Solutions",
+      "period": "2025 — Present",
+      "highlights": [
+        "Built AI-powered RCA engine using LLMs + Neo4j + MongoDB → 47% faster resolution",
+        "Developed RAG-based AI assistant → 40% reduction in technician dependency",
+        "Engineered offline OCR pipeline (TensorFlow Lite + Tesseract) → 92% accuracy",
+        "Built distributed sync architecture (Ditto + Realm) → 2.5× faster sync",
+        "Scaled backend to 5K+ users with <200ms latency",
+        "Reduced deployment time by 65% via CI/CD optimizations"
+      ],
+      "tags": ["LLM", "Neo4j", "RAG", "TensorFlow Lite", "Ditto", "Realm", "CI/CD"]
+    },
+    {
+      "role": "Software Development Engineer I",
+      "subtitle": "Mobile Apps",
+      "company": "Innovapptive Global Solutions",
+      "period": "2023 — 2025",
+      "highlights": [
+        "Built 4+ enterprise apps using React Native + Kotlin",
+        "Improved release velocity by 35% via Gradle + CI/CD optimization",
+        "Implemented offline-first architecture → 100% data reliability",
+        "Integrated OneDrive + AWS S3 → 60% faster file access",
+        "Improved user retention by 20% through UX improvements"
+      ],
+      "tags": ["React Native", "Kotlin", "MVVM", "Room", "AWS S3", "GraphQL"]
+    }
+  ],
+
+  "projects": {
+    "categories": ["All", "AI", "Systems", "Full-Stack"],
+    "items": [
+      {
+        "title": "AI-Powered Root Cause Analysis Engine",
+        "category": "AI",
+        "emoji": "🤖",
+        "type": "Production",
+        "problem": "Enterprise technicians spent hours manually diagnosing equipment failures with no intelligent assistance.",
+        "solution": "Built an LLM-based RCA engine that traverses a Neo4j knowledge graph to surface root causes and suggest fixes in real time.",
+        "impact": "47% faster resolution time in production. Used by 5,000+ technicians daily.",
+        "metrics": [
+          { "label": "Faster Resolution", "value": "47%" },
+          { "label": "Users", "value": "5K+" },
+          { "label": "Accuracy", "value": "92%" }
+        ],
+        "stack": ["LLM", "Neo4j", "MongoDB", "Node.js", "RAG"]
+      },
+      {
+        "title": "Real-Time Offline Sync System",
+        "category": "Systems",
+        "emoji": "🔄",
+        "type": "R&D",
+        "problem": "Field technicians lost data and productivity when working in areas with no internet connectivity.",
+        "solution": "Engineered a peer-to-peer sync architecture using Ditto SDK + Realm with conflict resolution and zero-downtime guarantees.",
+        "impact": "2.5× faster sync, 70% fewer sync failures, 100% data reliability in offline environments.",
+        "metrics": [
+          { "label": "Faster Sync", "value": "2.5×" },
+          { "label": "Fewer Failures", "value": "70%" },
+          { "label": "Data Reliability", "value": "100%" }
+        ],
+        "stack": ["Ditto SDK", "Realm", "React Native", "Kotlin"]
+      },
+      {
+        "title": "Construction Project Management Platform",
+        "category": "Full-Stack",
+        "emoji": "🏗️",
+        "type": "Production",
+        "problem": "Construction teams across 100+ sites had no unified platform for real-time task coordination.",
+        "solution": "Built a full-stack platform with React Native + Node.js + GraphQL enabling real-time collaboration, file sharing, and progress tracking.",
+        "impact": "30% reduction in project delays. Adopted by 100+ technicians across enterprise deployments.",
+        "metrics": [
+          { "label": "Fewer Delays", "value": "30%" },
+          { "label": "Technicians", "value": "100+" },
+          { "label": "Uptime", "value": "99.9%" }
+        ],
+        "stack": ["React Native", "Node.js", "GraphQL", "MongoDB", "AWS S3"]
+      },
+      {
+        "title": "Offline OCR Document Pipeline",
+        "category": "AI",
+        "emoji": "📄",
+        "type": "Production",
+        "problem": "Technicians needed to digitize paper-based work orders in the field without internet access.",
+        "solution": "Built an on-device OCR pipeline using TensorFlow Lite + Tesseract that processes documents entirely offline.",
+        "impact": "92% OCR accuracy on-device. 60% reduction in manual data entry time.",
+        "metrics": [
+          { "label": "OCR Accuracy", "value": "92%" },
+          { "label": "Less Manual Entry", "value": "60%" },
+          { "label": "Latency", "value": "<200ms" }
+        ],
+        "stack": ["TensorFlow Lite", "Tesseract", "React Native", "Kotlin"]
+      }
+    ]
+  },
+
+  "skills": [
+    {
+      "category": "Mobile & Frontend",
+      "icon": "📱",
+      "skills": ["React Native", "Android (Java/Kotlin)", "MVVM", "Room", "Retrofit", "Next.js"]
+    },
+    {
+      "category": "AI & Machine Learning",
+      "icon": "🧠",
+      "skills": ["OpenAI", "Groq", "LangChain", "TensorFlow Lite", "PyTorch", "Tesseract OCR", "RAG"]
+    },
+    {
+      "category": "Backend & APIs",
+      "icon": "⚙️",
+      "skills": ["Node.js", "Flask", "Django", "GraphQL", "REST", "OData", "AWS S3", "RabbitMQ"]
+    },
+    {
+      "category": "Databases",
+      "icon": "🗄️",
+      "skills": ["MongoDB", "Neo4j", "Firebase", "Realm", "DynamoDB"]
+    },
+    {
+      "category": "Sync & Systems",
+      "icon": "🔄",
+      "skills": ["Ditto SDK", "Offline-First Architecture", "P2P Sync", "Conflict Resolution"]
+    },
+    {
+      "category": "Tools & DevOps",
+      "icon": "🔧",
+      "skills": ["CI/CD", "Gradle", "Mixpanel", "Google Analytics", "Git"]
+    }
+  ],
+
+  "impact": [
+    {
+      "value": "47",
+      "suffix": "%",
+      "label": "Faster RCA Resolution",
+      "description": "AI-powered root cause analysis engine reduced mean time to resolution across enterprise deployments.",
+      "color": "from-indigo-500 to-violet-500"
+    },
+    {
+      "value": "2.5",
+      "suffix": "×",
+      "label": "Sync Performance",
+      "description": "Distributed offline sync architecture using Ditto + Realm outperforms previous solution by 2.5×.",
+      "color": "from-cyan-500 to-blue-500"
+    },
+    {
+      "value": "60",
+      "suffix": "%",
+      "label": "Latency Reduction",
+      "description": "OneDrive + AWS S3 integration with smart caching cut file loading latency by 60%.",
+      "color": "from-emerald-500 to-teal-500"
+    },
+    {
+      "value": "5000",
+      "suffix": "+",
+      "label": "Users Impacted",
+      "description": "Production systems actively used by 5,000+ field technicians globally, every single day.",
+      "color": "from-orange-500 to-amber-500"
+    },
+    {
+      "value": "65",
+      "suffix": "%",
+      "label": "Faster Deployments",
+      "description": "CI/CD pipeline optimizations reduced deployment time from hours to minutes.",
+      "color": "from-pink-500 to-rose-500"
+    },
+    {
+      "value": "100",
+      "suffix": "%",
+      "label": "Offline Reliability",
+      "description": "Zero data loss in offline environments — the system works whether or not there is connectivity.",
+      "color": "from-violet-500 to-purple-500"
+    }
+  ],
+
+  "achievements": [
+    {
+      "icon": "🥇",
+      "title": "1st Place — Gen AI Hackathon",
+      "year": "2025",
+      "description": "Won first place among all participants for building a production-ready AI solution under 48 hours.",
+      "badge": "Hackathon"
+    },
+    {
+      "icon": "🦁",
+      "title": "CEO's Lion Mode Award",
+      "year": "2024",
+      "description": "Recognized as a top performer among 500+ employees for exceptional impact and delivery.",
+      "badge": "Top Performer"
+    },
+    {
+      "icon": "⭐",
+      "title": "Outstanding Performer Award",
+      "year": "2024",
+      "description": "Awarded for consistently exceeding targets and delivering high-impact engineering work.",
+      "badge": "Excellence"
+    }
+  ],
+
+  "navbar": {
+    "links": [
+      { "label": "About", "href": "#about" },
+      { "label": "Experience", "href": "#experience" },
+      { "label": "Projects", "href": "#projects" },
+      { "label": "Skills", "href": "#skills" },
+      { "label": "Impact", "href": "#impact" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  },
+
+  "contact": {
+    "heading": "Let's Talk",
+    "subheading": "Open to senior / staff engineering roles, consulting, and interesting problems. Drop a message or reach out directly."
+  }
+}
