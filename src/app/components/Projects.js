@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import SectionWrapper from './SectionWrapper'
 import info from '@/data/information.json'
@@ -9,8 +10,18 @@ const { items: projects, categories } = info.projects
 
 export default function Projects() {
   const [active, setActive] = useState('All')
+  const [lightbox, setLightbox] = useState(null) // { proofs, index }
 
   const filtered = active === 'All' ? projects : projects.filter((p) => p.category === active)
+
+  const openLightbox = (proofs, index) => setLightbox({ proofs, index })
+  const closeLightbox = () => setLightbox(null)
+  const step = (dir) =>
+    setLightbox((prev) =>
+      prev
+        ? { ...prev, index: (prev.index + dir + prev.proofs.length) % prev.proofs.length }
+        : prev
+    )
 
   return (
     <SectionWrapper id="projects" className="py-24 px-6">
@@ -101,11 +112,138 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
+
+                {/* Proofs */}
+                {project.proofs && project.proofs.length > 0 && (
+                  <div className="mt-5 pt-5 border-t border-white/8">
+                    <span className="text-xs font-mono text-slate-500 uppercase tracking-wider mb-2 block">
+                      Proof
+                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      {project.proofs.map((proof, i) => (
+                        <button
+                          key={proof.src}
+                          onClick={() => openLightbox(project.proofs, i)}
+                          className="relative w-20 h-14 rounded-lg overflow-hidden border border-white/10 hover:border-indigo-500/50 transition-colors group/thumb"
+                        >
+                          {proof.type === 'video' ? (
+                            <>
+                              <video
+                                src={proof.src}
+                                className="w-full h-full object-cover"
+                                muted
+                                playsInline
+                              />
+                              <span className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover/thumb:bg-black/10 transition-colors">
+                                <svg viewBox="0 0 24 24" fill="white" className="w-5 h-5 drop-shadow">
+                                  <path d="M8 5v14l11-7z" />
+                                </svg>
+                              </span>
+                            </>
+                          ) : (
+                            <Image
+                              src={proof.src}
+                              alt={proof.caption || project.title}
+                              fill
+                              sizes="80px"
+                              className="object-cover group-hover/thumb:scale-105 transition-transform"
+                            />
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
       </div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightbox && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm p-4 md:p-10"
+            onClick={closeLightbox}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="relative max-w-4xl w-full max-h-[85vh] rounded-2xl overflow-hidden border border-white/10 bg-[#16161d]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={closeLightbox}
+                className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                aria-label="Close"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
+                  <path d="M18 6 6 18M6 6l12 12" />
+                </svg>
+              </button>
+
+              {lightbox.proofs.length > 1 && (
+                <>
+                  <button
+                    onClick={() => step(-1)}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    aria-label="Previous"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
+                      <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={() => step(1)}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    aria-label="Next"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </button>
+                </>
+              )}
+
+              <div className="flex items-center justify-center bg-black max-h-[70vh]">
+                {lightbox.proofs[lightbox.index].type === 'video' ? (
+                  <video
+                    key={lightbox.proofs[lightbox.index].src}
+                    src={lightbox.proofs[lightbox.index].src}
+                    className="max-h-[70vh] w-auto"
+                    controls
+                    autoPlay
+                  />
+                ) : (
+                  <img
+                    key={lightbox.proofs[lightbox.index].src}
+                    src={lightbox.proofs[lightbox.index].src}
+                    alt={lightbox.proofs[lightbox.index].caption || ''}
+                    className="max-h-[70vh] w-auto object-contain"
+                  />
+                )}
+              </div>
+
+              {lightbox.proofs[lightbox.index].caption && (
+                <div className="px-5 py-3 border-t border-white/8 text-sm text-slate-400">
+                  {lightbox.proofs[lightbox.index].caption}
+                  {lightbox.proofs.length > 1 && (
+                    <span className="ml-2 text-slate-600 font-mono text-xs">
+                      {lightbox.index + 1}/{lightbox.proofs.length}
+                    </span>
+                  )}
+                </div>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </SectionWrapper>
   )
 }

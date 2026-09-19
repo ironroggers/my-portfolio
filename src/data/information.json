@@ -16,7 +16,7 @@
       "url": "https://github.com/ironroggers",
       "handle": "ironroggers"
     },
-    "resumeUrl": "https://drive.google.com/file/d/1xHvpVqiEjNUet4pYftuuylx6fundkzfQ/view?usp=sharing",
+    "resumeUrl": "https://drive.google.com/file/d/1aDL_lIKO8X_Wjng-BQ0uLWv8qVXynGTf/view?usp=sharing",
     "photo": "/Atul-Photo.jpeg"
   },
 
@@ -122,7 +122,14 @@
           { "label": "Fewer Delays", "value": "30%" },
           { "label": "Technicians", "value": "100+" }
         ],
-        "stack": ["React Native", "Node.js", "MongoDB", "Firebase", "GraphQL", "React"]
+        "stack": ["React Native", "Node.js", "MongoDB", "Firebase", "GraphQL", "React"],
+        "proofs": [
+          {
+            "type": "video",
+            "src": "/proofs/construction-suite-demo.mp4",
+            "caption": "Roles & permissions admin console — granular access control across modules"
+          }
+        ]
       },
       {
         "title": "Real-Time Offline Sync (R&D)",
@@ -153,7 +160,37 @@
           { "label": "Users", "value": "5K+" },
           { "label": "Built In", "value": "48hrs" }
         ],
-        "stack": ["OpenAI", "Neo4j", "MongoDB", "Node.js", "RAG", "LangChain"]
+        "stack": ["OpenAI", "Neo4j", "MongoDB", "Node.js", "RAG", "LangChain"],
+        "proofs": [
+          {
+            "type": "image",
+            "src": "/proofs/rca-1.webp",
+            "width": 3600,
+            "height": 3020,
+            "caption": "AI-powered 5-Why analysis with conclusion & recommended actions"
+          },
+          {
+            "type": "image",
+            "src": "/proofs/rca-2.webp",
+            "width": 3600,
+            "height": 3030,
+            "caption": "Mobile issue tracking with drill-down 5-Why breakdown"
+          },
+          {
+            "type": "image",
+            "src": "/proofs/rca-3.webp",
+            "width": 1446,
+            "height": 1300,
+            "caption": "Actions centre — Kanban workflow with root-cause linked tasks"
+          },
+          {
+            "type": "image",
+            "src": "/proofs/rca-4.webp",
+            "width": 1446,
+            "height": 1300,
+            "caption": "Status tracking dashboard across RCA lifecycle"
+          }
+        ]
       }
     ]
   },
@@ -247,6 +284,13 @@
   ],
 
   "achievements": [
+    {
+      "icon": "🥈",
+      "title": "Runner Up — Agentic AI Hackathon",
+      "year": "2026",
+      "description": "Built an AI agent for planning and scheduling work orders in a maintenance plant.",
+      "badge": "Hackathon"
+    },
     {
       "icon": "🦁",
       "title": "CEO's Lion Mode Award",
