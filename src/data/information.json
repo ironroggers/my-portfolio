@@ -109,7 +109,7 @@
     "categories": ["All", "Full-Stack", "Systems", "AI"],
     "items": [
       {
-        "title": "Construction Project Management Suite",
+        "title": "Locus — Construction Project Management Suite",
         "category": "Full-Stack",
         "emoji": "🏗️",
         "type": "Production",
@@ -128,6 +128,48 @@
             "type": "video",
             "src": "/proofs/construction-suite-demo.mp4",
             "caption": "Roles & permissions admin console — granular access control across modules"
+          },
+          {
+            "type": "image",
+            "src": "/proofs/locus-2.jpeg",
+            "width": 719,
+            "height": 1600,
+            "caption": "Locus mobile — blocks overview with district filters, GP & OFC progress"
+          },
+          {
+            "type": "image",
+            "src": "/proofs/locus-6.jpeg",
+            "width": 719,
+            "height": 1600,
+            "caption": "Locus mobile — block detail with sections and gated restoration workflow"
+          },
+          {
+            "type": "image",
+            "src": "/proofs/locus-5.jpeg",
+            "width": 719,
+            "height": 1600,
+            "caption": "Locus mobile — section map with subsections plotted against the KML road"
+          },
+          {
+            "type": "image",
+            "src": "/proofs/locus-1.jpeg",
+            "width": 719,
+            "height": 1600,
+            "caption": "Locus mobile — HDD subsection with live progress, map and approval status"
+          },
+          {
+            "type": "image",
+            "src": "/proofs/locus-3.jpeg",
+            "width": 719,
+            "height": 1600,
+            "caption": "Locus mobile — full-screen route map with executed path and entry points"
+          },
+          {
+            "type": "image",
+            "src": "/proofs/locus-4.jpeg",
+            "width": 719,
+            "height": 1600,
+            "caption": "Locus mobile — depth profile graph and GPS-tagged pit photo evidence"
           }
         ]
       },

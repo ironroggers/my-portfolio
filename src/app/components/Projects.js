@@ -8,6 +8,8 @@ import info from '@/data/information.json'
 
 const { items: projects, categories } = info.projects
 
+const isPortrait = (proof) => proof.height > proof.width
+
 export default function Projects() {
   const [active, setActive] = useState('All')
   const [lightbox, setLightbox] = useState(null) // { proofs, index }
@@ -119,12 +121,14 @@ export default function Projects() {
                     <span className="text-xs font-mono text-slate-500 uppercase tracking-wider mb-2 block">
                       Proof
                     </span>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap items-end gap-2">
                       {project.proofs.map((proof, i) => (
                         <button
                           key={proof.src}
                           onClick={() => openLightbox(project.proofs, i)}
-                          className="relative w-20 h-14 rounded-lg overflow-hidden border border-white/10 hover:border-indigo-500/50 transition-colors group/thumb"
+                          className={`relative ${
+                            isPortrait(proof) ? 'w-9 h-20' : 'w-20 h-14'
+                          } rounded-lg overflow-hidden border border-white/10 hover:border-indigo-500/50 transition-colors group/thumb`}
                         >
                           {proof.type === 'video' ? (
                             <>
@@ -146,7 +150,9 @@ export default function Projects() {
                               alt={proof.caption || project.title}
                               fill
                               sizes="80px"
-                              className="object-cover group-hover/thumb:scale-105 transition-transform"
+                              className={`object-cover ${
+                                isPortrait(proof) ? 'object-top' : ''
+                              } group-hover/thumb:scale-105 transition-transform`}
                             />
                           )}
                         </button>
